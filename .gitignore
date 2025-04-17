@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VSCode
+.vscode/
+
+# Node (only if you use npm for anything, like managing jQuery)
+node_modules/
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# Build output (if any)
+dist/
+build/
+
+# Cache
+.cache/

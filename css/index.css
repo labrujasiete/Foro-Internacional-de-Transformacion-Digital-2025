@@ -1,0 +1,62 @@
+:root {
+    --primary-color: #6D1337;
+  }
+
+* {
+    font-family: "Montserrat", sans-serif;
+    color: #313131;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    /* background-color: #6F1633;
+    background: linear-gradient(165deg, #701439, #ad325b); */
+}
+
+body, html {
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+body {
+    /* background-image: url('../img/fondo_institucional_vertical.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100vh auto; */
+}
+
+.barra_institucional {
+    background-color: var(--primary-color);
+    padding: 9px 47px;
+}
+
+.barra_institucional img {
+    width: 322px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 600px) {
+
+}
+  
+/* Mobile */
+@media (max-width: 599px) {
+
+}
