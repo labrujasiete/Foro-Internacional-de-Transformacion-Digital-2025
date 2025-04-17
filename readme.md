@@ -1,6 +1,6 @@
 # Sitio Web – Foro Internacional de Transformación Digital
 
-![Gob-Color](https://github.com/user-attachments/assets/2c827c41-6b9e-4c83-bfb3-7ed4eccab97c)
+![Gob+ADBC+Corazon-Color](https://github.com/user-attachments/assets/34f4d62b-be69-4e1f-962f-ce5359b10746)
 
 Este repositorio contiene el código fuente del sitio informativo oficial del **Foro Internacional de Transformación Digital**, un evento único que reunirá a expertos, líderes empresariales, funcionarios gubernamentales y académicos para fomentar el intercambio de conocimientos, experiencias y mejores prácticas en áreas clave para el desarrollo económico y social.
 
