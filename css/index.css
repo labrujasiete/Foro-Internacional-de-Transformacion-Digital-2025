@@ -20,6 +20,8 @@ html {
 body, html {
     padding: 0px 0px;
     margin: 0px 0px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -213,6 +215,7 @@ body {
     gap: 75px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .intro_section {
@@ -358,11 +361,622 @@ body {
 .conferencistas_wrap {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
 
+.conferencistas_items_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 75px;
+    margin-top: 51px;
+}
+
+.section_title {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.conferencista_item {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 15px;
+}
+
+.conf_nombre {
+    font-size: 21px;
+    font-weight:500;
+    text-align: center;
+}
+
+.conf_titulo {
+    color: #909090;
+    text-align: center;
+    font-size: 17px;
+}
+
+.conferencista_img {
+    aspect-ratio: 1;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 8.25);
+    border-radius: 500px;
+    outline: 7px solid white;
+    margin-bottom: 17px;
+    transition: .3s;
+}
+
+.conferencista_item:hover .conferencista_img {
+    box-shadow: 0 0px 22px #ad325b;
 }
 
 
-.section_title {
+
+/* BRANDS SLIDER */
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 51px 0px;
+  }
+
+  .scroll-content {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+    gap: 21px;
+  }
+
+  .scroll-content img {
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  /* BRANDS SLIDER END */
+
+
+.programa_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.add_google_calendar_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    border-radius: 100px;
+    border: 1px solid #9E9E9E;
+    font-size: 17px;
+    padding: 7px 33px;
+    text-align: center;
+    margin-bottom: 51px;
+    transition: .3s;
+}
+
+.add_google_calendar_button:hover {
+    background-color: #00000026;
+    cursor: pointer;
+}
+
+.add_google_calendar_button:active {
+    background-color: #0000006b;
+    cursor: pointer;
+  }
+
+.calendar_icon {
+    aspect-ratio: 1;
+    width: 33px;
+}
+
+/* TABS SECTION */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+.tab {
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+.tab.active {
+    border-bottom: 4px solid #A81756;
+    font-weight: bold;
+}
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+.tab-content.active {
+    display: block;
+}
+
+.tab img {
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+.tab.active span {
+    color: #A81756;
+}
+
+
+.tab.active .tab_active {
+    display: block;
+}
+
+.tab.active .tab_unactive {
+    display: none;
+}
+
+.tab .tab_active {
+    display: none;
+}
+
+.tab .tab_unactive {
+    display: block;
+}
+/* END OF TABS SECTION */
+
+
+.programa_info {
+    background-color: #F7EFE8;
+    border: 1px solid #CA9266;
+    color: #CA9266;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: row;
+    padding: 11px 21px;
+    gap: 11px;
+    margin-bottom: 51px;
+}
+
+.schedule_timeout {
+    text-align: center;
+}
+
+.programa_info img{
+    width: 24px;
+    height: 24px;
+}
+
+.schedule_logo_wrap {
+    border-radius: 9px;
+    background-color: white;
+    padding: 5px 33px;
+}
+
+.schedule_item.schedule_purple .schedule_logo_wrap{
+    border: 1px solid #A81756;
+}
+
+.schedule_item.schedule_blue .schedule_logo_wrap{
+    border: 1px solid #00B7FF;
+}
+
+.schedule_item.schedule_brown .schedule_logo_wrap{
+    border: 1px solid #CA9266;
+}
+
+.schedule_item.schedule_grey .schedule_logo_wrap{
+    border: 1px solid #606060;
+}
+
+.schedule_item.schedule_short .schedule_details {
+    text-align: justify;
+}
+
+.schedule_item.schedule_short .schedule_logo {
+    height: auto;
+    width: 100%;
+}
+
+.schedule_logo {
+    height: 51px;
+}
+
+.schedule_item {
+    border-radius: 6px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 11px;
+    padding-left: 21px;
+    margin-bottom: 21px;
+}
+
+.schedule_long {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.schedule_short {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.schedule_purple {
+    background-color: #FDEDF4;
+    border-left: 6px solid #A81756;
+}
+
+.schedule_blue {
+    background-color: #E1F6FF;
+    border-left: 6px solid #00B7FF;
+}
+
+.schedule_brown {
+    background-color: #F2E4D9;
+    border-left: 6px solid #CA9266;
+}
+
+.schedule_grey {
+    background-color: #F0F0F0;
+    border-left: 6px solid #606060;
+}
+
+.schedule_time {
+    color: #959595;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.schedule_titles {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.schedule_name {
+    font-weight: 500;
+    font-size: 1.05rem;;
+}
+
+.schedule_details {
+    color: #757575;
+    font-size: 1rem;
+}
+
+.schedule_row {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 21px;
+}
+
+.sede_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.goo_maps_btn {
+    margin: 51px 0px;
+}
+
+.sede_top {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    width: 100%;
+    margin-top: 27px;
+}
+
+.sede_image {
+    background-image: url('../assets/images/real-inn-tijuana.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 350px;
+    width: 100%;
+    border-radius: 33px;
+}
+
+.sede_info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.sede_info_item {
+    gap: 11px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 21%;
+}
+
+.sede_info_title {
+    font-weight: 500;
+    font-size: 19px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.sede_info_body {
+    color: #909090;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.tab1, .tab2 {
+    width: 100%;
+}
+
+.the_map {
+    width: 23%;
+    height: 350px;
+    border:0; 
+    border-radius: 33px;
+    transition: .3s;
+}
+
+.the_map:hover {
+    width: 190%;
+}
+
+.hospedaje {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hospedaje_items_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hospedaje_item {
+    height: 500px;
+    width: 30%;
+    border-radius: 15px;
+    position: relative;
+}
+
+.hospedaje_item_1 {
+    background-image: url('../assets/images/placeholders/hospedaje_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hospedaje_item_2 {
+    background-image: url('../assets/images/placeholders/hospedaje_2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hospedaje_item_3 {
+    background-image: url('../assets/images/placeholders/hospedaje_3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top_shadow {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(to bottom, #00000082, transparent);
+}
+
+.bottom_shadow {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    z-index: 2;
+    background: linear-gradient(to bottom, transparent, #00000082);
+}
+
+.hospedaje_top_overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+}
+
+.overlay_top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.temp_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 51px;
+    padding-bottom: 100px;
+}
+
+.rating_wrap img {
+    width: 35px;
+    aspect-ratio: 1;
+}
+
+.temp_registro_btn {
+    padding: 8px 135px;
+    border: 2px solid #A81756;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 21px;
+    border-radius: 11px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(168, 23, 86, 0.17);
+    margin-bottom: 47px;
+    transition: .3s;
+}
+
+.temp_registro_btn:hover {
+    background-color: #eee4e8;
+    box-shadow: 0 0px 1px rgba(168, 23, 86, 0.17);
+    cursor: pointer;
+}
+
+.temp_registro_btn:active {
+    background-color: #d2b8c2;
+    box-shadow: 0 0px 1px rgba(168, 23, 86, 0.17);
+    cursor: pointer;
+}
+
+.temp_registro_btn span {
+    color: #A81756;
+    font-size: 1.3rem;
+}
+
+.temp_registro_btn img {
+    width: 33px;
+    aspect-ratio: 1;
+}
+
+.temp_title {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.temp_body {
+    margin-top: 11px;
+    font-size: 17px;
+    width: 600px;
+    text-align: center;
+    color: rgb(106, 106, 106);
+}
+
+.burger_menu {
+    display: none;
+}
+
+.screener {
+    display: none;
+}
+
+.drawer {
+    display: none;
+}
+
+.footer_divider {
+    /* width: 185px;
+    height: 2px; */
+    background: linear-gradient(45deg, 
+        rgba(203, 136, 97, 0) 0%,  /* Fully transparent */
+        #cc9368 25%,  
+        #cc9368 75%,
+        rgba(203, 136, 97, 0) 100%  /* Fully transparent */
+    );
+    transform: rotate(0deg);
+    height: 185px;
+    width: 2px;
+}
+
+
+
+
+/* FOOTER */
+
+.institutional_footer {
+    gap: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 51px;
+    background-color: #3f3f3e;
+    border-bottom: 9px solid #B17A45;
+}
+
+.institutional_footer img{
+    height: 200px;
+}
+
+.all_links_section_wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.links_section {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.links_section a {
+    color: white;
+}
+
+.micro_divider {
+    width: 75px;
+    height: 3px;
+    background-color: #cc9368;
+}
+
+.normal_links_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+.main_section_title {
     text-align: center;
     border-left: 5px solid #CA9266;
     display: flex;
@@ -374,6 +988,20 @@ body {
     margin-right: auto;
     margin: 51px 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -476,6 +1104,137 @@ body {
         text-align: center;
     }
 
+    .burger_menu {
+        display: none;
+    }
+
+    .barra_institucional {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 9px 27px;
+    }
+
+    .burger_menu {
+        display: block;
+        width: 50px!important;
+        height: 50px!important;
+        filter: invert(1);
+        opacity: .95;
+    }
+
+    .screener {
+        display: none;
+        height: 100%;
+        width: 100%;
+        background-color: #0000007d;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 998;
+        transition: .3s;
+    }
+    
+    
+    
+    .drawer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 300px;
+        background-color: #373735;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        z-index: 999;
+        transition: .3s;
+        align-items: center;
+    }
+    
+    .drawer_logo {
+        width: 55%;
+        width: 55%;
+        margin-top: 51px;
+        margin-bottom: 51px;
+    }
+    
+    .contact_icons_drawer {
+        margin-top: 51px;
+        gap: 17px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .contact_icons_drawer img {
+        height: 33px;
+        width: 33px;
+        filter: invert(1);
+    }
+    
+    .contact_icons_drawer img:hover {
+        opacity: .5;
+    }
+    
+    .contact_icons_drawer img:active {
+        opacity: .5;
+    }
+    
+    .links_wrap_drawer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 51px;
+        gap: 25px;
+    }
+    
+    .links_wrap_drawer span {
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+    .links_wrap_drawer span:hover {
+        color: #cc9368;
+    }
+    
+    .links_wrap_drawer span:active {
+        color: #cc9368;
+    }
+    
+    .close_drawer {
+        filter: invert(1);
+        width: 36px;
+        position: absolute;
+        right: 17px;
+        top: 17px;
+        opacity: .7;
+    }
+    
+    .close_drawer:hover {
+        cursor: pointer;
+    }
+    
+    .footer_divider {
+        transform: rotate(0deg);
+        height: 185px;
+        width: 2px;
+    }
+
+    .footer_divider {
+        transform: rotate(0deg);
+        height: 2px;
+        width: 100%;
+    }
+
+    .institutional_footer {
+        flex-direction: column-reverse;
+    }
+
+    .all_links_section_wrap {
+        flex-direction: column;
+    }
+    
+    
+
     
 }
 
@@ -570,6 +1329,193 @@ body {
         width: 100%;
         text-align: center;
     }
+
+    .section_title {
+        letter-spacing: 7px;
+        font-size: 24px;
+    }
+
+    .schedule_long {
+        flex-direction: column;
+    }
+
+    .schedule_logo {
+        height: auto;
+        width: 100%;
+    }
+
+    .schedule_row {
+        flex-direction: column;
+    }
+
+    .sede_top {
+        flex-direction: column;
+    }
+
+    .the_map {
+        width: 100%;
+    }
+
+    .the_map:hover {
+        width: 100%;
+    }
+
+    .sede_image {
+        height: 196px;
+    }
+
+    .sede_info_item {
+        width: 100%;
+    }
+
+    .sede_info {
+        flex-direction: column;
+        width: 100%;
+        gap: 51px;
+    }
+    
+    .temp_registro_btn {
+        padding: 8px 0px;
+        width: 90%;
+        justify-content: center;
+        margin-top: 21px;
+    }
+
+    .temp_body {
+        width: 90%;
+    }
+
+    .barra_institucional {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 9px 27px;
+        align-items: center;
+    }
+
+    .barra_institucional img {
+        width: 75%;
+        height: fit-content;
+    }
+
+    .burger_menu {
+        display: block;
+        width: 50px!important;
+        height: 50px!important;
+        filter: invert(1);
+        opacity: .95;
+    }
+
+    .screener {
+        display: none;
+        height: 100%;
+        width: 100%;
+        background-color: #0000007d;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 998;
+        transition: .3s;
+    }
+    
+    
+    
+    .drawer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 300px;
+        background-color: #373735;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        z-index: 999;
+        transition: .3s;
+        align-items: center;
+    }
+    
+    .drawer_logo {
+        width: 55%;
+        width: 55%;
+        margin-top: 51px;
+        margin-bottom: 51px;
+    }
+    
+    .contact_icons_drawer {
+        margin-top: 51px;
+        gap: 17px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .contact_icons_drawer img {
+        height: 33px;
+        width: 33px;
+        filter: invert(1);
+    }
+    
+    .contact_icons_drawer img:hover {
+        opacity: .5;
+    }
+    
+    .contact_icons_drawer img:active {
+        opacity: .5;
+    }
+    
+    .links_wrap_drawer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 51px;
+        gap: 25px;
+    }
+    
+    .links_wrap_drawer span {
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+    .links_wrap_drawer span:hover {
+        color: #cc9368;
+    }
+    
+    .links_wrap_drawer span:active {
+        color: #cc9368;
+    }
+    
+    .close_drawer {
+        filter: invert(1);
+        width: 36px;
+        position: absolute;
+        right: 17px;
+        top: 17px;
+        opacity: .7;
+    }
+    
+    .close_drawer:hover {
+        cursor: pointer;
+    }
+    
+    .footer_divider {
+        transform: rotate(0deg);
+        height: 2px;
+        width: 100%;
+    }
+
+    .institutional_footer {
+        flex-direction: column-reverse;
+    }
+
+    .all_links_section_wrap {
+        flex-direction: column;
+    }
+    
+
+
+
+
+
+
 
 
 
